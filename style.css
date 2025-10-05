@@ -1,18 +1,16 @@
-/* Basic Reset and Variables (DUAL-TONE DARK MODE) */
 :root {
-    --primary-green: #3ad39a; /* Primary Action/Highlight Color (Neon Green) */
-    --secondary-blue: #00FFFF; /* Secondary Accent Color (Electric Cyan) */
+    --primary-green: #3ad39a;
+    --secondary-blue: #00FFFF;
     
-    --text-color-light: #f0f0f0; 
-    --text-color-dark-accent: #888888; 
+    --text-color-light: #f0f0f0;
+    --text-color-dark-accent: #888888;
     
-    /* MAX CONTRAST COLORS */
-    --background-dark: #000000; /* PURE BLACK for max contrast */
-    --card-background-dark: #0f0f0f; /* Slightly off-black for cards */
+    --background-dark: #000000;
+    --card-background-dark: #0f0f0f;
     --header-bg-dark: #0f0f0f;
-    --border-dark: #333333; /* More noticeable border */
+    --border-dark: #333333;
 
-    --button-text-dark: #000000; /* Pure black text on bright button */
+    --button-text-dark: #000000;
 
     --font-main: 'Roboto', sans-serif;
     --font-pixel: 'Press Start 2P', cursive;
@@ -28,17 +26,15 @@
 body {
     font-family: var(--font-main);
     line-height: 1.6;
-    color: var(--text-color-light); 
-    background-color: var(--background-dark); 
+    color: var(--text-color-light);
+    background-color: var(--background-dark);
     scroll-behavior: smooth;
 }
 
-/* Global Transition for smooth interactivity */
 a, button, .btn, .nav-button, .skill-card, .project-card, .contact-item, .logo-circle {
     transition: all 0.3s ease-in-out;
 }
 
-/* General Section Styling */
 section {
     padding: 80px 5%;
     min-height: 80vh;
@@ -55,11 +51,10 @@ h2 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2.8em;
-    color: var(--text-color-light); 
+    color: var(--text-color-light);
     font-weight: 700;
 }
 
-/* Reusable Button Styles */
 .btn {
     display: inline-block;
     background-color: var(--primary-green);
@@ -69,7 +64,7 @@ h2 {
     border-radius: 8px;
     margin-top: 20px;
     font-weight: 700;
-    box-shadow: 0 4px 10px rgba(58, 211, 154, 0.5); 
+    box-shadow: 0 4px 10px rgba(58, 211, 154, 0.5);
     transform: scale(1);
     border: none;
 }
@@ -77,25 +72,24 @@ h2 {
 .btn:hover {
     background-color: #31b382;
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 20px rgba(58, 211, 154, 0.8); 
+    box-shadow: 0 8px 20px rgba(58, 211, 154, 0.8);
 }
 
 .btn-secondary {
-    background-color: var(--card-background-dark); 
-    color: var(--text-color-light); 
+    background-color: var(--card-background-dark);
+    color: var(--text-color-light);
     margin-left: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); 
-    border: 1px solid var(--secondary-blue); /* Secondary color border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--secondary-blue);
 }
 
 .btn-secondary:hover {
     background-color: var(--primary-green);
-    color: var(--button-text-dark); 
+    color: var(--button-text-dark);
     border-color: var(--primary-green);
     transform: translateY(-3px) scale(1.02);
 }
 
-/* --- Header Styling (Interactive) --- */
 .header {
     background-color: var(--header-bg-dark);
     color: var(--text-color-light);
@@ -103,12 +97,10 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
+    /* REMOVED: position: sticky; and top: 0; */
     z-index: 1000;
-    /* BLUE HEADER SHADOW AND BORDER */
-    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2); 
-    border-bottom: 2px solid var(--secondary-blue); 
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+    border-bottom: 2px solid var(--secondary-blue);
 }
 
 .logo-circle {
@@ -116,8 +108,8 @@ h2 {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--primary-green); 
-    color: var(--button-text-dark); 
+    background-color: var(--primary-green);
+    color: var(--button-text-dark);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,14 +128,14 @@ h2 {
 }
 
 .nav-button {
-    background-color: var(--card-background-dark); 
+    background-color: var(--card-background-dark);
     color: var(--text-color-light);
     text-decoration: none;
     padding: 8px 18px;
     border-radius: 20px;
     font-weight: 500;
     border: 1px solid var(--border-dark);
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.8); 
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.8);
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
@@ -163,7 +155,7 @@ h2 {
 
 .resume-header-btn {
     background-color: var(--primary-green);
-    color: var(--button-text-dark); 
+    color: var(--button-text-dark);
     padding: 8px 18px;
     border-radius: 20px;
     text-decoration: none;
@@ -176,11 +168,10 @@ h2 {
 
 .resume-header-btn:hover {
     background-color: #31b382;
-    box-shadow: 0 0 20px rgba(58, 211, 154, 0.8); 
+    box-shadow: 0 0 20px rgba(58, 211, 154, 0.8);
 }
 
 
-/* --- Intro Section (Blue Rotating Border) --- */
 .intro-section {
     background-color: var(--background-dark);
     min-height: 100vh;
@@ -200,7 +191,6 @@ h2 {
 }
 
 
-/* Running light border effect for the intro text card (MAX GLOW) */
 .intro-text-card {
     background-color: transparent;
     padding: 30px;
@@ -210,11 +200,10 @@ h2 {
     max-width: 50%;
     text-align: left;
     overflow: hidden;
-    border: 1px solid var(--border-dark); 
+    border: 1px solid var(--border-dark);
     isolation: isolate;
 }
 
-/* BLUE GLOW Pseudo-element for the running light effect */
 .intro-text-card::before {
     content: '';
     position: absolute;
@@ -222,7 +211,6 @@ h2 {
     left: -50%;
     width: 200%;
     height: 200%;
-    /* Swapped green for blue in the conic gradient */
     background: conic-gradient(
         transparent 0deg,
         transparent 180deg,
@@ -232,12 +220,11 @@ h2 {
         var(--secondary-blue) 300deg,
         transparent 330deg
     );
-    animation: rotateBorder 3s linear infinite; 
-    opacity: 1; 
+    animation: rotateBorder 3s linear infinite;
+    opacity: 1;
     z-index: 1;
 }
 
-/* Mask to cover the glowing border effect (Pure black background) */
 .intro-text-card::after {
     content: '';
     position: absolute;
@@ -253,7 +240,6 @@ h2 {
     z-index: 2;
 }
 
-/* Ensure the text content stays on top of the ::after mask */
 .intro-text-card h2, .intro-text-card p {
     position: relative;
     z-index: 3;
@@ -267,7 +253,7 @@ h2 {
     font-size: 2.8em;
     line-height: 1.3;
     font-weight: 400;
-    color: var(--text-color-light); 
+    color: var(--text-color-light);
     margin-bottom: 0;
     text-align: left;
 }
@@ -292,7 +278,7 @@ h2 {
     margin: 0 auto;
     animation: float 3s ease-in-out infinite;
     border-radius: 20px;
-    box-shadow: 0 0 40px 20px rgba(58, 211, 154, 0.7); /* Green robot glow */
+    box-shadow: 0 0 40px 20px rgba(58, 211, 154, 0.7);
 }
 
 @keyframes float {
@@ -302,7 +288,6 @@ h2 {
 }
 
 
-/* --- About Story Section --- */
 .about-story-section {
     background-color: var(--background-dark);
     color: var(--text-color-light);
@@ -312,12 +297,11 @@ h2 {
 }
 
 .about-story-card {
-    background-color: var(--card-background-dark); 
+    background-color: var(--card-background-dark);
     border-radius: 15px;
     padding: 40px;
     padding-top: 100px;
-    /* BLUE BORDER AND GLOW SHADOW */
-    box-shadow: 0 10px 40px rgba(0, 255, 255, 0.2), 0 0 10px rgba(0, 0, 0, 0.8); 
+    box-shadow: 0 10px 40px rgba(0, 255, 255, 0.2), 0 0 10px rgba(0, 0, 0, 0.8);
     max-width: 800px;
     width: 100%;
     display: flex;
@@ -345,24 +329,22 @@ h2 {
     color: var(--text-color-light);
 }
 
-/* AVATAR CONTAINER STYLES */
 .about-story-avatar-placeholder {
     width: 150px;
     height: 150px;
-    background-color: var(--primary-green); /* Green background for avatar border */
+    background-color: var(--primary-green);
     border-radius: 50%;
     position: absolute;
     top: -75px;
     left: 50%;
     transform: translateX(-50%);
 
-    border: 5px solid var(--background-dark); 
-    box-shadow: 0 5px 15px rgba(58, 211, 154, 0.5); /* Avatar glow remains green */
+    border: 5px solid var(--background-dark);
+    box-shadow: 0 5px 15px rgba(58, 211, 154, 0.5);
     z-index: 11;
     overflow: hidden;
 }
 
-/* AVATAR IMAGE STYLES */
 .avatar-img {
     width: 100%;
     height: 100%;
@@ -372,7 +354,6 @@ h2 {
 }
 
 
-/* --- Skills Section (MAX GLOW AND HOVER) --- */
 .skills-section {
     border-top: 1px solid var(--border-dark);
     border-bottom: 1px solid var(--border-dark);
@@ -394,10 +375,9 @@ h2 {
     background-color: var(--card-background-dark);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8); 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* BLUE BORDER IN REST STATE */
     border: 1px solid var(--secondary-blue);
     transform: translateY(0);
     
@@ -409,25 +389,24 @@ h2 {
 
 .skill-card:hover {
     transform: translateY(-10px) scale(1.03);
-    /* INTENSE GREEN SHADOW ON HOVER */
-    box-shadow: 0 0 30px 10px rgba(58, 211, 154, 0.8); 
+    box-shadow: 0 0 30px 10px rgba(58, 211, 154, 0.8);
     border-color: var(--primary-green);
 }
 
 .skill-icon {
-    font-size: 3.5em; 
+    font-size: 3.5em;
     color: var(--primary-green);
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 0 0 20px var(--primary-green); 
-    order: 1; 
+    text-shadow: 0 0 20px var(--primary-green);
+    order: 1;
 }
 
 .skill-card h3 {
-    order: 2; 
-    font-size: 1.2em; 
+    order: 2;
+    font-size: 1.2em;
     color: var(--text-color-light);
     margin-bottom: 10px;
     font-weight: 700;
@@ -442,10 +421,9 @@ h2 {
     font-size: 0.95em;
     color: var(--text-color-light);
     line-height: 1.7;
-    order: 3; 
+    order: 3;
 }
 
-/* --- Projects Section (Secondary Highlight) --- */
 .projects-section {
     background-color: var(--background-dark);
     color: var(--text-color-light);
@@ -468,15 +446,15 @@ h2 {
     background-color: var(--card-background-dark);
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8); 
-    border: 1px solid var(--secondary-blue); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--secondary-blue);
     color: var(--text-color-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.35); 
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.35);
 }
 
 .project-card h3 {
@@ -485,15 +463,14 @@ h2 {
     font-size: 1.5em;
 }
 
-/* NEW: Style for project images */
 .project-image {
-    max-width: 100%; /* Ensure image fits within the card */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Slightly rounded corners for the image */
-    margin-bottom: 15px; /* Space below the image */
-    margin-top: 10px; /* Space above the image */
-    display: block; /* Ensures margin works correctly */
-    border: 1px solid var(--border-dark); /* Subtle border for definition */
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    display: block;
+    border: 1px solid var(--border-dark);
 }
 
 
@@ -512,7 +489,6 @@ h2 {
     padding-left: 5px;
 }
 
-/* --- Contact Section (Pixel Font and GLOW) --- */
 .contact-section {
     background-color: var(--background-dark);
     color: var(--text-color-light);
@@ -527,8 +503,8 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     
-    font-family: var(--font-pixel); 
-    font-size: 1.5em; 
+    font-family: var(--font-pixel);
+    font-size: 1.5em;
     
     line-height: 1.4;
     color: var(--primary-green);
@@ -541,8 +517,7 @@ h2 {
     background-color: var(--card-background-dark);
     padding: 40px;
     border-radius: 15px;
-    /* BLUE GLOW */
-    box-shadow: 0 10px 40px rgba(0, 255, 255, 0.15); 
+    box-shadow: 0 10px 40px rgba(0, 255, 255, 0.15);
     max-width: 600px;
     width: 100%;
     margin-top: 50px;
@@ -580,7 +555,7 @@ h2 {
 .contact-social-icons {
     display: flex;
     justify-content: center;
-    gap: 35px; /* Increased gap for spacing */
+    gap: 35px;
 }
 
 .contact-social-icons a {
@@ -594,7 +569,6 @@ h2 {
     transform: translateY(-8px);
 }
 
-/* --- Footer --- */
 .footer {
     background-color: #000000;
     color: var(--text-color-dark-accent);
@@ -604,46 +578,40 @@ h2 {
     border-top: 1px solid var(--border-dark);
 }
 
-/* --- Pixel Grid Background (Blue Grid) --- */
 .pixel-grid-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* BLUE GRID */
     background-image:
         linear-gradient(0deg, transparent 9px, rgba(0, 255, 255, 0.1) 10px),
         linear-gradient(90deg, transparent 9px, rgba(0, 255, 255, 0.1) 10px);
     background-size: 10px 10px;
-    opacity: 0.3; 
+    opacity: 0.3;
     pointer-events: none;
     z-index: 1;
 }
 
-/* Keep the grid consistent across all sections */
 .about-story-section .pixel-grid-bg,
 .projects-section .pixel-grid-bg {
     opacity: 0.15;
 }
 
-/* --- Responsiveness (No structural changes) --- */
 @media (max-width: 992px) {
-    /* Responsive adjustment for the Intro section (stacks content) */
     .intro-content-centered {
-        flex-direction: column-reverse; 
+        flex-direction: column-reverse;
         gap: 40px;
     }
     .intro-text-card {
-        max-width: 90%; 
-        text-align: center; 
+        max-width: 90%;
+        text-align: center;
     }
     .intro-text-card h2 {
-        text-align: center; 
+        text-align: center;
         font-size: 2.2em;
     }
 
-    /* General responsive changes */
     .skills-section h2 {
         font-size: 2.8em;
     }
@@ -652,33 +620,66 @@ h2 {
         padding-bottom: 40px;
     }
     
-    /* Make skills fit on two lines for mid-size screens */
     .skill-grid {
         grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 768px) {
     .header {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-bottom: 10px;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 5%;
     }
+
     .logo-circle {
-        margin: 0 0 15px 0;
+        margin: 0 auto 10px;
+        order: 1;
     }
+    
     .nav {
-        width: 100%;
-        justify-content: center;
+        display: flex;
         flex-wrap: wrap;
-        margin-bottom: 15px;
-    }
-    .nav-button {
-        margin: 5px;
-    }
-    .header-actions {
-        width: 100%;
         justify-content: center;
+        width: 100%;
+        max-width: 350px;
+        margin: 10px auto 5px;
+        gap: 5px;
+        order: 2;
+    }
+    
+    .nav a:nth-child(1),
+    .nav a:nth-child(2),
+    .nav a:nth-child(3) {
+        flex-basis: 30%;
+        padding: 8px 10px;
+        font-size: 0.8em;
+        margin: 0;
+    }
+    
+    .nav a:nth-child(4) {
+        flex-basis: 50%;
+        max-width: 200px;
+        padding: 10px 15px;
+        font-size: 0.9em;
+        order: 4;
+    }
+
+    .header-actions {
+        width: 50%;
+        max-width: 250px;
+        margin: 5px 0 0;
+        order: 3;
+    }
+    
+    .resume-header-btn {
+        width: 100%;
+        padding: 10px 15px;
+        font-size: 1em;
     }
 
     h2 {
@@ -689,6 +690,14 @@ h2 {
     }
     .skills-section h2 {
         font-size: 2.5em;
+    }
+
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 
     .contact-headline {
